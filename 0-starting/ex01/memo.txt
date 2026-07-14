@@ -1,0 +1,2 @@
+stdoutとfileを比較してみた
+diff <(python format_ft_time.py| cat -e) result.txt
