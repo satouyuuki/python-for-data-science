@@ -5,10 +5,16 @@ ft_dict = {"Hello": "titi!"}
 
 # TODO
 ft_list[1] = "World!"
+
 #ft_tuple[1] = "Japan!"
 tmp = list(ft_tuple)
 tmp[1] = "Japan!"
 ft_tuple = tuple(tmp)
+
+ft_set.discard("tutu!")
+ft_set.add("Tokyo!")
+
+ft_dict["Hello"] = "42Tokyo!"
 
 
 print(ft_list)

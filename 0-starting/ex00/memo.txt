@@ -4,3 +4,9 @@ list()コンストラクタの引数は一つだけ
 thislist = list(("apple", "banana", "cherry"))
 
 tapleを作成したらadd, deleteできない
+
+setは変更できない、順序なし、indexなし
+ただ、add, removeはできる
+pop()は順序がないので何が削除されるかわからない
+
+dictは同じデータを入れれない
