@@ -1,0 +1,18 @@
+The text contains 171 characters:
+2 upper letters
+121 lower letters
+8 punctuation marks
+25 spaces
+15 digits
+$>
+
+$>python building.py
+What is the text to count?
+Hello World!
+The text contains 13 characters:
+2 upper letters
+8 lower letters
+1 punctuation marks
+2 spaces
+0 digits
+$>
