@@ -1,28 +1,47 @@
 import sys
 
-def print_info(txt):
+def count_upper(txt):
     upper = 0
-    lower = 0
-    punct = 0
-    space = 0
-    digit = 0
     for char in txt:
         if char.isupper():
             upper += 1
-        elif char.islower():
+    return upper
+
+def count_lower(txt):
+    lower = 0
+    for char in txt:
+        if char.islower():
             lower += 1
-        elif char in "'.,;:?!-\"":
-            punct += 1
-        elif char.isspace():
+    return lower
+
+def count_space(txt):
+    space = 0
+    for char in txt:
+        if char.isspace():
             space += 1
-        elif char.isdigit():
+    return space
+
+def count_digit(txt):
+    digit = 0
+    for char in txt:
+        if char.isdigit():
             digit += 1
-    print(f"The text contains {len(txt)} characters:")
-    print(f"{upper} upper letters")
-    print(f"{lower} lower letters")
-    print(f"{punct} punctuation marks")
-    print(f"{space} spaces")
-    print(f"{digit} digits")
+    return digit
+
+def count_punct(txt):
+    punct = 0
+    for char in txt:
+        if char in "'.,;:?!-\"":
+            punct += 1
+    return punct
+
+def print_info(txt):
+    print(f"""The text contains {len(txt)} characters:
+{count_upper(txt)} upper letters
+{count_lower(txt)} lower letters
+{count_punct(txt)} punctuation marks
+{count_space(txt)} spaces
+{count_digit(txt)} digits""")
 
 def main(argv):
     argc = len(argv)
