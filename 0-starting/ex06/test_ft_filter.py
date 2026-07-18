@@ -9,7 +9,10 @@ def myFunc(x):
         return True
 
 #adults = filter(None, args)
-adults = filter(myFunc, args)
-
+#adults = filter(myFunc, args)
+# iteratorを作るのがrange
+adults = filter(myFunc, range(20))
+print(type(adults))
 for x in adults:
+    #print(type(x))
     print(x)
