@@ -1,15 +1,16 @@
+import os
 def update(completion):
-    ends = "|"
+    starts = "|["
+    ends = "]|"
     body = "="
     pointer = ">"
-    intervals = 20
-    bucket = 100//intervals
-    intervals = intervals
-    bodies = int(completion // bucket)
-    string = ends
+    intervals = os.get_terminal_size().columns - 44
+    bucket = 100 / intervals
+    bodies = int(completion / bucket)
+    string = starts
     string += body * bodies
     string += pointer
-    string += " " * (intervals - bodies + 1)
+    string += " " * (intervals - bodies)
     string += ends
     return string
 
