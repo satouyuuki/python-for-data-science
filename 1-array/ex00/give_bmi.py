@@ -1,15 +1,20 @@
-# import numpy as np
+import numpy as np
+
+
+def _give_bmi(height, weight):
+    return weight / height ** 2
+
+
+def _apply_limit(bmi: int | float, limit: int) -> bool:
+    return bmi > limit
 
 
 def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
-    res = list()
-    res.append(weight[0] / height[0] ** 2)
-    res.append(weight[1] / height[1] ** 2)
-    return res
+    res = np.frompyfunc(_give_bmi, 2, 1)(height, weight)
+    return list(res)
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
-    res = list()
-    res.append(bmi[0] > limit)
-    res.append(bmi[1] > limit)
-    return res
+    repeat_limit = [limit] * len(bmi)
+    res = np.frompyfunc(_apply_limit, 2, 1)(bmi, repeat_limit)
+    return list(res)
