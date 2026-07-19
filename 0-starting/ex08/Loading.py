@@ -17,7 +17,7 @@ def update(completion):
 def ft_tqdm(lst: range) -> None:
     maxIters = len(lst)
     for iters in lst:
-        progress = (iters + 1) * 100 / maxIters
-        print(f"{progress:.0f}%{update(progress)} {iters+1}/{maxIters}", end="\r")
+        progress = int((iters + 1) * 100 / maxIters)
+        print(f"{progress:>3,}%{update(progress)} {iters+1}/{maxIters}", end="\r")
         yield
     return
