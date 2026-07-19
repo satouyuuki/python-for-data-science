@@ -1,4 +1,6 @@
 import os
+
+
 def update(completion):
     starts = "|["
     ends = "]|"
@@ -14,10 +16,11 @@ def update(completion):
     string += ends
     return string
 
+
 def ft_tqdm(lst: range) -> None:
     maxIters = len(lst)
-    for iters in lst:
-        progress = int((iters + 1) * 100 / maxIters)
-        print(f"{progress:>3,}%{update(progress)} {iters+1}/{maxIters}", end="\r")
+    for it in lst:
+        progress = int((it + 1) * 100 / maxIters)
+        print(f"{progress:>3,}%{update(progress)} {it+1}/{maxIters}", end="\r")
         yield
     return

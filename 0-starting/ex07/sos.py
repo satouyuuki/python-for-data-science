@@ -1,6 +1,6 @@
 import sys
 
-NESTED_MORSE = { " ": "/ ",
+NESTED_MORSE = {" ": "/ ",
                 "A": ".- ",
                 "B": "-... ",
                 "C": "-.-. ",
@@ -39,6 +39,7 @@ NESTED_MORSE = { " ": "/ ",
                 "0": "----- ",
                 }
 
+
 def main(argv):
     argc = len(argv)
     try:
@@ -52,6 +53,7 @@ def main(argv):
         print(res[:-1])
     except AssertionError as e:
         print(f"{type(e).__name__}: {e}")
+
 
 if __name__ == "__main__":
     main(sys.argv)

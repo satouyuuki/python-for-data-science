@@ -5,9 +5,11 @@ def count_in_list(lst: list, target: str) -> int:
             count += 1
     return count
 
+
 def main():
     print(count_in_list(["toto", "tata", "toto"], "toto"))
     print(count_in_list(["toto", "tata", "toto"], "tutu"))
 
+
 if __name__ == "__main__":
-    main();
+    main()
