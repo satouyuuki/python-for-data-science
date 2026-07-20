@@ -7,7 +7,7 @@ def ft_load(path: str) -> list:
         assert path is not None and isinstance(path, str), (
                 "the path are not str")
         image = Image.open(path)
-        image.show()
+        # image.show()
         # print(type(image.format))
         data = asarray(image)
         print(f"The shape of image is: {data.shape}")
