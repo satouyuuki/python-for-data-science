@@ -8,9 +8,12 @@ def print_info(img: np.ndarray):
     print(data)
 
 
-def convert_matplot(img: np.ndarray):
+def convert_matplot(img: np.ndarray, is_gray=False):
     print_info(img)
-    pyplot.imshow(img)
+    if is_gray:
+        pyplot.imshow(img, cmap='gray')
+    else:
+        pyplot.imshow(img)
     pyplot.show()
 
 
