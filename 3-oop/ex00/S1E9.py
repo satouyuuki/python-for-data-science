@@ -6,6 +6,15 @@ class Character(ABC):
     @abstractmethod
     def __init__(self, first_name, is_alive=True):
         pass
+    # def __new__(cls, *_, **__):
+    #     try:
+    #         if cls.__abstractmethods__:
+    #             raise TypeError
+    #             # print("TypeError")
+    #             # sys.exit(1)
+    #     except TypeError as e:
+    #         print(f"{type(e).__name__}: {e}")
+    #     return super().__new__(cls)
 
     @abstractmethod
     def die(self):
