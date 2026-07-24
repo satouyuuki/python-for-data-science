@@ -1,0 +1,10 @@
+$> python tester.py
+{'first_name': 'Ned', 'is_alive': True}
+True
+False
+Your docstring for Class
+Your docstring for Constructor
+Your docstring for Method
+---
+{'first_name': 'Lyanna', 'is_alive': False}
+$>
