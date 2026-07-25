@@ -2,16 +2,20 @@ from S1E9 import Character
 
 
 class Baratheon(Character):
-    # your code here
-    pass
+    def __init__(self, first_name, is_alive=True):
+        super().__init__(first_name, is_alive)
+
+    def die(self):
+        pass
 
 
 class Lannister(Character):
-    # your code here
-    pass
+    def __init__(self, first_name, is_alive=True):
+        super().__init__(first_name, is_alive)
 
+    def die(self):
+        pass
 
-# decorator
-def create_lannister():
-    # your code here
-    pass
+    @classmethod
+    def create_lannister(cls, first_name, is_alive=True):
+        return cls(first_name, is_alive)
